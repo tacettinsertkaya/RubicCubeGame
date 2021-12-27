@@ -1,0 +1,363 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    animation: pulse 5s;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: rgb(209, 213, 219);
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.scene {
+    background: rgb(209, 213, 219);
+    height: 100%;
+    margin: 0 auto;
+    perspective: 2000px;
+    width: 100%;
+}
+
+.scene>.icon {
+    left: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+.scene>.icon>div {
+    position: absolute;
+}
+
+.scene>.icon>.fused {
+    left: -1px;
+    top: -1px;
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(70, 107, 176, .9));
+    filter: drop-shadow(0px 0px 20px rgba(70, 107, 176, .9));
+}
+
+.scene>.icon>.fused>div {
+    height: 12px;
+    width: 12px;
+}
+
+.scene>.icon>.f1 {
+    transform: translate3d(040px, 40px, 0);
+}
+
+.scene>.icon>.f2 {
+    transform: translate3d(000px, 40px, 0);
+}
+
+.scene>.icon>.f3 {
+    transform: translate3d(120px, 40px, 0);
+}
+
+.scene>.icon>.f4 {
+    transform: translate3d(080px, 40px, 0);
+}
+
+.scene>.icon>.f5 {
+    transform: translate3d(040px, 00px, 0);
+}
+
+.scene>.icon>.f6 {
+    transform: translate3d(040px, 80px, 0);
+}
+
+.scene>.icon>div>div {
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.scene>.icon>div>.p1 {
+    left: 00px;
+    top: 00px;
+}
+
+.scene>.icon>div>.p2 {
+    left: 12px;
+    top: 00px;
+}
+
+.scene>.icon>div>.p3 {
+    left: 24px;
+    top: 00px;
+}
+
+.scene>.icon>div>.p4 {
+    left: 00px;
+    top: 12px;
+}
+
+.scene>.icon>div>.p5 {
+    left: 12px;
+    top: 12px;
+}
+
+.scene>.icon>div>.p6 {
+    left: 24px;
+    top: 12px;
+}
+
+.scene>.icon>div>.p7 {
+    left: 00px;
+    top: 24px;
+}
+
+.scene>.icon>div>.p8 {
+    left: 12px;
+    top: 24px;
+}
+
+.scene>.icon>div>.p9 {
+    left: 24px;
+    top: 24px;
+}
+
+.scene>.cube {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: rotateX(-30deg) rotateY(45deg);
+    transform-style: preserve-3d;
+}
+
+.scene>.cube>.pointer {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.scene>.cube>.pointer>div {
+    position: absolute;
+    width: 142px;
+    height: 142px;
+    left: -71px;
+    top: -71px;
+    transform-origin: center center -71px;
+    transform-style: preserve-3d;
+}
+
+.scene>.cube>.pointer>.x {
+    transform: translateZ(71px);
+}
+
+.scene>.cube>.pointer>.y {
+    transform: translateZ(71px) rotateX( 90deg);
+}
+
+.scene>.cube>.pointer>.z {
+    transform: translateZ(71px) rotateY(270deg);
+}
+
+.scene>.cube>.pointer .hint {
+    left: 52px;
+    position: absolute;
+    top: 61px;
+    transform: translateZ(100px);
+    visibility: hidden;
+}
+
+.scene>.cube>.pointer .hint>div {
+    position: absolute;
+}
+
+.scene>.cube>.pointer .hint>.rect {
+    border-radius: 2px;
+    height: 10px;
+    left: 2px;
+    top: 5px;
+    width: 10px;
+}
+
+.scene>.cube>.pointer .hint>.rect:nth-child(2) {
+    left: 14px;
+}
+
+.scene>.cube>.pointer .hint>.rect:nth-child(3) {
+    left: 26px;
+}
+
+.scene>.cube>.pointer .hint>.rect.active {
+    background-color: rgb(0, 155, 72);
+}
+
+.scene>.cube>.pointer .hint>.arrow {
+    left: 50px;
+    transform-origin: -31px 10px;
+    width: 80px;
+}
+
+.scene>.cube>.pointer .hint>.arrow.d {
+    transform: rotate( 90deg);
+}
+
+.scene>.cube>.pointer .hint>.arrow.l {
+    transform: rotate(180deg);
+}
+
+.scene>.cube>.pointer .hint>.arrow.u {
+    transform: rotate(270deg);
+}
+
+.scene>.cube>.pointer .hint>.arrow>div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.scene>.cube>.pointer .hint>.arrow>.body {
+    background-color: rgb(0, 155, 72);
+    height: 10px;
+    margin-top: 5px;
+    transition: width .3s ease;
+    width: 20px;
+}
+
+.scene>.cube>.pointer .hint>.arrow>.head {
+    border-left: 20px solid rgb(0, 155, 72);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.scene>.cube>.pointer .hint>.arrow.active>.body {
+    width: 60px;
+}
+
+.scene>.cube>.axis {
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform .3s ease;
+}
+
+.scene>.cube .f1 {
+    transform: translateZ(70px) rotateX( 00deg);
+}
+
+.scene>.cube .f2 {
+    transform: translateZ(70px) rotateY(270deg);
+}
+
+.scene>.cube .f3 {
+    transform: translateZ(70px) rotateY(180deg);
+}
+
+.scene>.cube .f4 {
+    transform: translateZ(70px) rotateY( 90deg);
+}
+
+.scene>.cube .f5 {
+    transform: translateZ(70px) rotateX( 90deg);
+}
+
+.scene>.cube .f6 {
+    transform: translateZ(70px) rotateX(270deg);
+}
+
+.scene>.cube .p {
+    backface-visibility: hidden;
+    border-radius: 5px;
+    height: 40px;
+    outline: 1px solid transparent;
+    position: absolute;
+    width: 40px;
+}
+
+.scene>.cube .p1 {
+    left: -65px;
+    top: -65px;
+    transform-origin: 065px 065px -70px;
+}
+
+.scene>.cube .p2 {
+    left: -20px;
+    top: -65px;
+    transform-origin: 020px 065px -70px;
+}
+
+.scene>.cube .p3 {
+    left: 025px;
+    top: -65px;
+    transform-origin: -25px 065px -70px;
+}
+
+.scene>.cube .p4 {
+    left: -65px;
+    top: -20px;
+    transform-origin: 065px 020px -70px;
+}
+
+.scene>.cube .p5 {
+    left: -20px;
+    top: -20px;
+    transform-origin: 020px 020px -70px;
+}
+
+.scene>.cube .p6 {
+    left: 025px;
+    top: -20px;
+    transform-origin: -25px 020px -70px;
+}
+
+.scene>.cube .p7 {
+    left: -65px;
+    top: 025px;
+    transform-origin: 065px -25px -70px;
+}
+
+.scene>.cube .p8 {
+    left: -20px;
+    top: 025px;
+    transform-origin: 020px -25px -70px;
+}
+
+.scene>.cube .p9 {
+    left: 025px;
+    top: 025px;
+    transform-origin: -25px -25px -70px;
+}
+
+.scene .c1 {
+    background: rgb(183, 18, 52);
+}
+
+.scene .c2 {
+    background: rgb(0, 155, 72);
+}
+
+.scene .c3 {
+    background: rgb(255, 88, 0);
+}
+
+.scene .c4 {
+    background: rgb(0, 70, 173);
+}
+
+.scene .c5 {
+    background: white;
+}
+
+.scene .c6 {
+    background: rgb(255, 213, 0);
+}
+
+@-webkit-keyframes roll {
+    from {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
